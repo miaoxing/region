@@ -1,6 +1,6 @@
 <?php
 
-namespace plugins\region\tests\controllers;
+namespace miaoxing\region\tests\controllers;
 
 class RegionsTest extends \miaoxing\plugin\tests\BaseControllerTestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace plugins\region;
+namespace miaoxing\region;
 
 class Plugin extends \miaoxing\plugin\BasePlugin
 {
