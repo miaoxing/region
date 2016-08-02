@@ -1,0 +1,15 @@
+{
+  "name": "miaoxing/region",
+  "keywords": [
+    "miaoxing", "region"
+  ],
+  "license": "MIT",
+  "require": {
+    "miaoxing/plugin": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "miaoxing\\region\\": ""
+    }
+  }
+}
