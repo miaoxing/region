@@ -11,5 +11,6 @@
     "psr-4": {
       "miaoxing\\region\\": ""
     }
-  }
+  },
+  "minimum-stability": "dev"
 }
