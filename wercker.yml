@@ -17,4 +17,4 @@ build:
         code: phpunit --verbose --stderr
     - script:
         name: perform project mess detection using PHPMD
-        code: phpmd . text tests/phpmd.xml --exclude vendor --ignore-violations-on-exit
+        code: phpmd . text vendor/miaoxing/plugin/tests/phpmd.xml --exclude vendor --ignore-violations-on-exit
