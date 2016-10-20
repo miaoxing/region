@@ -9,7 +9,7 @@
   },
   "autoload": {
     "psr-4": {
-      "miaoxing\\region\\": ""
+      "Miaoxing\\Region\\": "src"
     }
   },
   "minimum-stability": "dev"
