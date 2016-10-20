@@ -1,6 +1,6 @@
 <?php
 
-namespace miaoxing\region\controllers;
+namespace Miaoxing\Region\Controller;
 
 class Areas extends \miaoxing\plugin\BaseController
 {
