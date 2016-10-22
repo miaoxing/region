@@ -13,9 +13,9 @@ class V20161020173530CreateUsersTable
     {
         $this->scheme->table('regions')
             ->id()
-            ->integer('parentId')
+            ->int('parentId')
             ->string('name', 32)
-            ->tinyInteger('sort')->comment('顺序,从大到小排列')
+            ->tinyInt('sort')->comment('顺序,从大到小排列')
             ->exec();
     }
 
