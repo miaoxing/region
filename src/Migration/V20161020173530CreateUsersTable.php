@@ -15,12 +15,12 @@ class V20161020173530CreateUsersTable
             ->id()
             ->int('parentId')
             ->string('name', 32)
-            ->tinyInt('sort')->comment('顺序,从大到小排列')
+            ->tinyInt('sort', 2)->comment('顺序,从大到小排列')
             ->exec();
     }
 
     public function down()
     {
-        $this->scheme->dropIfExists('users');
+        $this->scheme->dropIfExists('regions');
     }
 }
