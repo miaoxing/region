@@ -22,6 +22,6 @@ class V20161020173530CreateRegionsTable extends BaseService
 
     public function down()
     {
-        $this->scheme->dropIfExists('regions');
+        $this->scheme->dropIfExists('regions2');
     }
 }
