@@ -2,16 +2,17 @@
 
 namespace Miaoxing\Region\Migration;
 
+use miaoxing\plugin\BaseService;
 use services\Scheme;
 
 /**
  * @property Scheme $scheme
  */
-class V20161020173530CreateUsersTable
+class V20161020173530CreateRegionsTable extends BaseService
 {
     public function up()
     {
-        $this->scheme->table('regions')
+        $this->scheme->table('regions2')
             ->id()
             ->int('parentId')
             ->string('name', 32)
