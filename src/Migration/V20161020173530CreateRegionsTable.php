@@ -21,8 +21,8 @@ class V20161020173530CreateRegionsTable extends BaseService
             ->tinyInt('sort', 2)->comment('顺序,从大到小排列')
             ->exec();
 
-        //$file = dirname(dirname(__DIR__)) . '/resources/schemas/regions.sql';
-        //$this->db->executeUpdate(file_get_contents($file));
+        $file = dirname(dirname(__DIR__)) . '/resources/schemas/regions.sql';
+        $this->db->executeUpdate(file_get_contents($file));
     }
 
     public function down()
