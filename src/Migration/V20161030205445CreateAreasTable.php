@@ -14,7 +14,6 @@ class V20161030205445CreateAreasTable extends BaseService
 {
     public function up()
     {
-        $this->scheme->dropIfExists('areas');
         $this->scheme->table('areas')
             ->id()
             ->int('parentId')
