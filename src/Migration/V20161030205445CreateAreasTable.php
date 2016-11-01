@@ -14,6 +14,7 @@ class V20161030205445CreateAreasTable extends BaseService
 {
     public function up()
     {
+        $this->scheme->dropIfExists('areas');
         $this->scheme->table('areas')
             ->id()
             ->int('parentId')
@@ -22,7 +23,7 @@ class V20161030205445CreateAreasTable extends BaseService
             ->exec();
 
         $file = dirname(dirname(__DIR__)) . '/resources/schemas/areas.sql';
-        $this->db->executeUpdate(file_get_contents($file));
+        $this->db->query(file_get_contents($file));
     }
 
     public function down()
