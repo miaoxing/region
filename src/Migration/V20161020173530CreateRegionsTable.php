@@ -2,15 +2,9 @@
 
 namespace Miaoxing\Region\Migration;
 
-use miaoxing\plugin\BaseService;
-use services\Scheme;
-use Wei\Db;
+use Miaoxing\Plugin\BaseMigration;
 
-/**
- * @property Scheme $scheme
- * @property Db $db
- */
-class V20161020173530CreateRegionsTable extends BaseService
+class V20161020173530CreateRegionsTable extends BaseMigration
 {
     public function up()
     {
