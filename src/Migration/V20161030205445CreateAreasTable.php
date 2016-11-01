@@ -19,6 +19,8 @@ class V20161030205445CreateAreasTable extends BaseService
             ->int('parentId')
             ->string('name', 32)
             ->tinyInt('sort', 2)->comment('顺序,从大到小排列')
+            ->index('parentId')
+            ->index('name')
             ->exec();
 
         $file = dirname(dirname(__DIR__)) . '/resources/schemas/areas.sql';
