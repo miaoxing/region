@@ -3,7 +3,7 @@
 namespace Miaoxing\Region\Migration;
 
 use miaoxing\plugin\BaseService;
-use services\Scheme;
+use Miaoxing\Plugin\Service\Scheme;
 use Wei\Db;
 
 /**
