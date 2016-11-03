@@ -16,5 +16,7 @@
     "psr-4": {
       "MiaoxingTest\\Region\\": "tests"
     }
-  }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
