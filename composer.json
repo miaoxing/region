@@ -5,12 +5,16 @@
   ],
   "license": "MIT",
   "require": {
-    "miaoxing/app": "dev-master"
+    "miaoxing/app": "dev-master@dev"
   },
   "autoload": {
     "psr-4": {
       "Miaoxing\\Region\\": "src"
     }
   },
-  "minimum-stability": "dev"
+  "autoload-dev": {
+    "psr-4": {
+      "MiaoxingTest\\Region\\": "tests"
+    }
+  }
 }
