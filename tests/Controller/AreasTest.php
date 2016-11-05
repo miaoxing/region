@@ -2,6 +2,6 @@
 
 namespace MiaoxingTest\Region\Controller;
 
-class AreasTest extends \MiaoxingTest\Plugin\BaseControllerTestCase
+class AreasTest extends \Miaoxing\Plugin\Test\BaseControllerTestCase
 {
 }
