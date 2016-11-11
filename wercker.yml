@@ -1,4 +1,4 @@
-box: miaoxing/php56-fpm:build
+box: miaoxing/build
 
 services:
   - id: mysql:5.6
