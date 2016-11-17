@@ -37,10 +37,11 @@ class Lbs extends BaseService
                 'code' => -1,
                 'province' => '',
                 'city' => '',
-                'district' => ''
+                'district' => '',
             ];
             $this->logger->warning($e, ['ip' => $ip]);
         }
+
         return $info;
     }
 
@@ -53,6 +54,7 @@ class Lbs extends BaseService
         $info = $this->getIpInfo($ip);
         $info['province'] = $this->removeSuffix($info['province'], ['省', '自治区']);
         $info['city'] = $this->removeSuffix($info['city'], ['市', '区']);
+
         return $info;
     }
 
@@ -60,9 +62,10 @@ class Lbs extends BaseService
     {
         foreach ($suffixes as $suffix) {
             if ($this->wei->isEndsWith($name, $suffix)) {
-                return substr($name, 0, - strlen($suffix));
+                return substr($name, 0, -strlen($suffix));
             }
         }
+
         return $name;
     }
 }
