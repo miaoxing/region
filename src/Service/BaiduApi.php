@@ -3,11 +3,14 @@
 namespace Miaoxing\Region\Service;
 
 use miaoxing\plugin\BaseService;
+use Wei\Http;
+use Wei\Logger;
 
 /**
  * 百度Web服务API
  *
- * @method \Wei\Http http($options)
+ * @property Logger $logger
+ * @method Http http($options)
  * @link http://developer.baidu.com/map/webservice.htm
  */
 class BaiduApi extends BaseService
@@ -30,7 +33,13 @@ class BaiduApi extends BaseService
      * 根据IP获取地址信息
      *
      * 参考错误
-     * Array ( [status] => 2 [message] => Request Parameter Error:ak required/参数必须 [uid] => [sk] => [logformat] => [ak] => )
+     * Array (
+     *   [status] => 2
+     *   [message] => Request Parameter Error:ak required/参数必须
+     *   [uid] => [sk] =>
+     *   [logformat] =>
+     *   [ak] =>
+     * )
      *
      * @param string $ip
      * @return array
