@@ -2,19 +2,13 @@
 
 namespace Miaoxing\Region\Migration;
 
-use miaoxing\plugin\BaseService;
-use Miaoxing\Plugin\Service\Scheme;
-use Wei\Db;
+use Miaoxing\Plugin\BaseMigration;
 
-/**
- * @property Scheme $scheme
- * @property Db $db
- */
-class V20161030205445CreateAreasTable extends BaseService
+class V20161030205445CreateAreasTable extends BaseMigration
 {
     public function up()
     {
-        $this->scheme->table('areas')
+        $this->schema->table('areas')
             ->id()
             ->int('parentId')
             ->string('name', 32)
@@ -29,6 +23,6 @@ class V20161030205445CreateAreasTable extends BaseService
 
     public function down()
     {
-        $this->scheme->dropIfExists('areas');
+        $this->schema->dropIfExists('areas');
     }
 }

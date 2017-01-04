@@ -8,7 +8,7 @@ class V20161020173530CreateRegionsTable extends BaseMigration
 {
     public function up()
     {
-        $this->scheme->table('regions')
+        $this->schema->table('regions')
             ->id()
             ->int('parentId')
             ->string('name', 32)
@@ -23,6 +23,6 @@ class V20161020173530CreateRegionsTable extends BaseMigration
 
     public function down()
     {
-        $this->scheme->dropIfExists('regions');
+        $this->schema->dropIfExists('regions');
     }
 }
