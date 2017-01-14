@@ -47,7 +47,6 @@ class BaiduApi extends BaseService
      */
     public function getIpInfo($ip)
     {
-        $ip = '116.7.30.8';
         $response = $this->http([
             'url' => 'http://api.map.baidu.com/location/ip',
             'referer' => true,
