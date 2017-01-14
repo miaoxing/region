@@ -47,6 +47,7 @@ class BaiduApi extends BaseService
      */
     public function getIpInfo($ip)
     {
+        $ip = '116.7.30.8';
         $response = $this->http([
             'url' => 'http://api.map.baidu.com/location/ip',
             'referer' => true,
@@ -67,11 +68,14 @@ class BaiduApi extends BaseService
         }
 
         // 重新构造数据结构,和其他接口保持一致
+        $detail = $response['content']['address_detail'];
         return [
             'code' => $response['status'] === 0 ? 1 : -$response['status'],
-            'province' => $response['content']['address_detail']['province'],
-            'city' => $response['content']['address_detail']['city'],
-            'district' => $response['content']['address_detail']['district'],
+            'province' => (string) $detail['province'],
+            'city' => (string) $detail['city'],
+            'district' => (string) $detail['district'],
+            'street' => (string) $detail['street'],
+            'address' => (string) $response['content']['address']
         ];
     }
 

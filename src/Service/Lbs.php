@@ -38,6 +38,8 @@ class Lbs extends BaseService
                 'province' => '',
                 'city' => '',
                 'district' => '',
+                'street' => '',
+                'address' => ''
             ];
             $this->logger->warning($e, ['ip' => $ip]);
         }
