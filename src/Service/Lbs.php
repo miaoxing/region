@@ -29,7 +29,7 @@ class Lbs extends BaseService
         $ip || $ip = $this->request->getIp();
         try {
             $that = $this;
-            $info = $this->cache->get('ipInfo' . $ip, function () use ($ip, $that) {
+            $info = $this->cache->get('ip-info:' . $ip, 86400 * 7, function () use ($ip, $that) {
                 return $that->ipApi->getIpInfo($ip);
             });
         } catch (\ErrorException $e) {

@@ -70,11 +70,11 @@ class BaiduApi extends BaseService
         $detail = $response['content']['address_detail'];
         return [
             'code' => $response['status'] === 0 ? 1 : -$response['status'],
-            'province' => (string) $detail['province'],
-            'city' => (string) $detail['city'],
-            'district' => (string) $detail['district'],
-            'street' => (string) $detail['street'],
-            'address' => (string) $response['content']['address']
+            'province' => $detail['province'],
+            'city' => $detail['city'],
+            'district' => $detail['district'],
+            'street' => $detail['street'],
+            'address' => $detail['street'] . $detail['street_number']
         ];
     }
 
