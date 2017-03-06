@@ -18,7 +18,7 @@ build:
           bash vendor/miaoxing/plugin/build/build-wercker.sh --coverage 1
   after-steps:
     - miaoxing/github-issue-notify:
-        token: $GITHUB_ISSUE_TOKEN
-        repo: $GITHUB_ISSUE_REPO
+        token: $GITHUB_ISSUE_NOTIFY_TOKEN
+        repo: $GITHUB_ISSUE_NOTIFY_REPO
         title: "[$(date +%y-%m-%d)]Build failed: %title%"
         error_file: error.txt
