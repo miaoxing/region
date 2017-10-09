@@ -68,13 +68,17 @@ class BaiduApi extends BaseService
 
         // 重新构造数据结构,和其他接口保持一致
         $detail = $response['content']['address_detail'];
+        $parts = explode('|', $response['address']);
+
         return [
             'code' => $response['status'] === 0 ? 1 : -$response['status'],
             'province' => $detail['province'],
             'city' => $detail['city'],
             'district' => $detail['district'],
             'street' => $detail['street'],
-            'address' => $detail['street'] . $detail['street_number']
+            'address' => $detail['street'] . $detail['street_number'],
+            'point' => $response['content']['point'],
+            'isp' => $parts[4],
         ];
     }
 
