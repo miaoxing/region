@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Region\Controller;
 
-class Regions extends \miaoxing\plugin\BaseController
+class Regions extends \Miaoxing\Plugin\BaseController
 {
     protected $guestPages = [
         'regions'
