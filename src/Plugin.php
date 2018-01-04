@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Region;
 
-class Plugin extends \miaoxing\plugin\BasePlugin
+class Plugin extends \Miaoxing\Plugin\BasePlugin
 {
     protected $name = '地区资料';
 
