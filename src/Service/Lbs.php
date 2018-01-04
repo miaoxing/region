@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Region\Service;
 
-use miaoxing\plugin\BaseService;
+use Miaoxing\Plugin\BaseService;
 
 /**
  * Location-based service
