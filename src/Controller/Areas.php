@@ -5,7 +5,7 @@ namespace Miaoxing\Region\Controller;
 class Areas extends \Miaoxing\Plugin\BaseController
 {
     protected $guestPages = [
-        'areas'
+        'areas',
     ];
 
     public function indexAction($req)
@@ -14,7 +14,7 @@ class Areas extends \Miaoxing\Plugin\BaseController
         $areas = wei()->appDb('areas')
             ->select('id AS value, name AS label')
             ->asc('id')
-            ->andWhere(['parentId' => (int)$req['parentId']]);
+            ->andWhere(['parentId' => (int) $req['parentId']]);
 
         // 排除指定的区域
         if ($req['exceptIds'] && is_array($req['exceptIds'])) {

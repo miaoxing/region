@@ -5,7 +5,7 @@ namespace Miaoxing\Region\Controller;
 class Regions extends \Miaoxing\Plugin\BaseController
 {
     protected $guestPages = [
-        'regions'
+        'regions',
     ];
 
     public function indexAction($req)
@@ -14,7 +14,7 @@ class Regions extends \Miaoxing\Plugin\BaseController
         if (!is_numeric($req['parentId'])) {
             $parentId = wei()->appDb('regions')->select('id')->fetchColumn(['name' => $req['parentId']]);
         } else {
-            $parentId = (int)$req['parentId'];
+            $parentId = (int) $req['parentId'];
         }
 
         // 构造基本的查询
