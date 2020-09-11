@@ -1,5 +1,6 @@
 {
   "name": "miaoxing/region",
+  "type": "miaoxing-plugin",
   "keywords": [
     "miaoxing", "region"
   ],
@@ -18,5 +19,15 @@
     }
   },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "extra": {
+    "installer-types": [
+      "miaoxing-plugin"
+    ],
+    "installer-paths": {
+      "plugins/{$name}/": [
+        "type:miaoxing-plugin"
+      ]
+    }
+  }
 }
