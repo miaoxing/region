@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Region\Migration;
 
-use Miaoxing\Plugin\BaseMigration;
+use Wei\Migration\BaseMigration;
 
 class V20161030205445CreateAreasTable extends BaseMigration
 {
