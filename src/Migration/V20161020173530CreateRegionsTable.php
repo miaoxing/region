@@ -10,15 +10,19 @@ class V20161020173530CreateRegionsTable extends BaseMigration
     {
         $this->schema->table('regions')
             ->id()
-            ->int('parentId')
+            ->int('parent_id')
             ->string('name', 32)
-            ->tinyInt('sort', 2)->comment('顺序,从大到小排列')
-            ->index('parentId')
+            ->string('short_name', 32)
+            ->smallInt('sort')->comment('顺序，从大到小排列')
+            ->bool('has_children')
+            ->index('parent_id')
             ->index('name')
             ->exec();
 
         $file = dirname(dirname(__DIR__)) . '/resources/schemas/regions.sql';
-        $this->db->executeUpdate(file_get_contents($file));
+        $content = file_get_contents($file);
+        $content = str_replace('%prefix%', $this->db->getTablePrefix(), $content);
+        $this->db->executeUpdate($content);
     }
 
     public function down()
