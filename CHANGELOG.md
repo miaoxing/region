@@ -1,3 +1,13 @@
+## [0.1.1](https://github.com/miaoxing/region/compare/v0.1.0...v0.1.1) (2020-09-27)
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/app:** upgrade from 0.2.3 to 0.2.4
+
 # 0.1.0 (2020-09-25)
 
 
