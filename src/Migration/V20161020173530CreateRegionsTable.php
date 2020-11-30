@@ -10,10 +10,10 @@ class V20161020173530CreateRegionsTable extends BaseMigration
     {
         $this->schema->table('regions')
             ->id()
-            ->int('parent_id')
+            ->uInt('parent_id')
             ->string('name', 32)
             ->string('short_name', 32)
-            ->smallInt('sort')->comment('顺序，从大到小排列')
+            ->uSmallInt('sort')->comment('顺序，从大到小排列')
             ->bool('has_children')
             ->index('parent_id')
             ->index('name')
