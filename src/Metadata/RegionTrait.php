@@ -2,6 +2,8 @@
 
 namespace Miaoxing\Region\Metadata;
 
+use Miaoxing\Plugin\Model\ModelTrait;
+
 /**
  * RegionTrait
  *
@@ -15,6 +17,8 @@ namespace Miaoxing\Region\Metadata;
  */
 trait RegionTrait
 {
+    use ModelTrait;
+
     /**
      * @var array
      * @see CastTrait::$casts

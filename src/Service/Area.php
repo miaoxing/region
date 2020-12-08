@@ -3,8 +3,9 @@
 namespace Miaoxing\Region\Service;
 
 use Miaoxing\Plugin\BaseModel;
+use Miaoxing\Plugin\BaseService;
 
-class Area extends BaseModel
+class Area extends BaseService
 {
     protected $table = 'areas';
 

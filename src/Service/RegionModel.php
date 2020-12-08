@@ -2,10 +2,11 @@
 
 namespace Miaoxing\Region\Service;
 
+use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Plugin\Service\Model;
 use Miaoxing\Region\Metadata\RegionTrait;
 
-class RegionModel extends Model
+class RegionModel extends BaseModel
 {
     use RegionTrait;
 
