@@ -12,6 +12,6 @@ class RegionModel extends BaseModel
 
     public function getShortNameAttribute()
     {
-        return $this->data['short_name'] ?: $this->name;
+        return $this->attributes['short_name'] ?: $this->name;
     }
 }
