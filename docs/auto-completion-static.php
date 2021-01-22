@@ -338,6 +338,17 @@ class RegionModel
     }
 
     /**
+     * Executes a MAX query to receive the max value of column
+     *
+     * @param string $column
+     * @return string|null
+     * @see RegionModel::max
+     */
+    public static function max(string $column): ?string
+    {
+    }
+
+    /**
      * Execute a update query with specified data
      *
      * @param array|string $set
@@ -1228,6 +1239,17 @@ class RegionModel
      * @see RegionModel::cnt
      */
     public function cnt($column = '*'): int
+    {
+    }
+
+    /**
+     * Executes a MAX query to receive the max value of column
+     *
+     * @param string $column
+     * @return string|null
+     * @see RegionModel::max
+     */
+    public function max(string $column): ?string
     {
     }
 
