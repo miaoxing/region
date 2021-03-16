@@ -7,6 +7,9 @@ use Miaoxing\Plugin\Model\ModelTrait;
 use Miaoxing\Plugin\Service\Model;
 use Miaoxing\Region\Metadata\RegionTrait;
 
+/**
+ * @property RegionModel $parent
+ */
 class RegionModel extends BaseModel
 {
     use ModelTrait;
@@ -32,6 +35,11 @@ class RegionModel extends BaseModel
     public function children()
     {
         return $this->hasMany(static::class, 'parentId');
+    }
+
+    public function parent()
+    {
+        return $this->belongsTo(static::class, 'id', 'parentId');
     }
 
     /**
