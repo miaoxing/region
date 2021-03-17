@@ -1,3 +1,18 @@
+## [0.1.9](https://github.com/miaoxing/region/compare/v0.1.8...v0.1.9) (2021-03-17)
+
+
+### Features
+
+* **RegionModel:** 增加 `parent` 方法，用于获取父区域 ([7baa5b6](https://github.com/miaoxing/region/commit/7baa5b61d7261f4f1f837c0a2fac989dee1ff2eb))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/app:** upgrade from `0.2.11` to `0.2.12`
+
 ## [0.1.8](https://github.com/miaoxing/region/compare/v0.1.7...v0.1.8) (2021-03-12)
 
 
