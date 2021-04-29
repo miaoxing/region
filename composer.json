@@ -1,6 +1,7 @@
 {
   "name": "miaoxing/region",
   "type": "miaoxing-plugin",
+  "description": "Miaoxing Region Plugin",
   "keywords": [
     "miaoxing",
     "region"
