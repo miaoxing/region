@@ -32,12 +32,12 @@ class RegionModel extends BaseModel
         return ($this->attributes['shortName'] ?? null) ?: $this->name;
     }
 
-    public function children()
+    public function children(): RegionModel
     {
         return $this->hasMany(static::class, 'parentId');
     }
 
-    public function parent()
+    public function parent(): RegionModel
     {
         return $this->belongsTo(static::class, 'id', 'parentId');
     }
