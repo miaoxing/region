@@ -29,7 +29,7 @@ return new class extends BaseController {
 
         $regions->all();
 
-        if (in_array('children', (array) $req['expand'])) {
+        if (in_array('children', (array) $req['include'])) {
             $regions->loadChildren($skipVirtual);
         }
 
