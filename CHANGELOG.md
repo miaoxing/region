@@ -1,3 +1,26 @@
+# [0.2.0](https://github.com/miaoxing/region/compare/v0.1.14...v0.2.0) (2021-10-28)
+
+
+### Code Refactoring
+
+* `expand` 参数改为 `include` ([94e4d37](https://github.com/miaoxing/region/commit/94e4d37995f8ee3682e59a13b21116354ea1043c))
+* **Model:** 模型的关联方法加上返回值 ([665fad4](https://github.com/miaoxing/region/commit/665fad493f36de620512e9738bb782fbf99a546a))
+
+
+### BREAKING CHANGES
+
+* `expand` 参数改为 `include`
+* **Model:** 模型的关联方法加上返回值
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/app:** upgrade from `0.3.3` to `0.4.0`
+* **@miaoxing/dev:** upgrade from `7.0.1` to `8.0.0`
+
 ## [0.1.14](https://github.com/miaoxing/region/compare/v0.1.13...v0.1.14) (2021-05-21)
 
 
