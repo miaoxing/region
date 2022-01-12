@@ -1,3 +1,19 @@
+## [0.2.1](https://github.com/miaoxing/region/compare/v0.2.0...v0.2.1) (2022-01-12)
+
+
+### Features
+
+* **region:** 增加 `admin-api/regions` 接口以便后台调用 ([12b86c6](https://github.com/miaoxing/region/commit/12b86c640a9d497e2a6bb1de42212f307509866a))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/app:** upgrade from `0.4.0` to `0.5.0`
+* **@miaoxing/dev:** upgrade from `8.0.0` to `8.0.1`
+
 # [0.2.0](https://github.com/miaoxing/region/compare/v0.1.14...v0.2.0) (2021-10-28)
 
 
