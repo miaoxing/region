@@ -3,14 +3,13 @@
 namespace Miaoxing\Region\Service;
 
 use Miaoxing\Plugin\BaseService;
-use Wei\Http;
 use Wei\Logger;
 
 /**
  * 百度Web服务API
  *
  * @property Logger $logger
- * @method Http http($options)
+ * @mixin \HttpPropMixin
  * @link http://developer.baidu.com/map/webservice.htm
  */
 class BaiduApi extends BaseService
@@ -47,7 +46,7 @@ class BaiduApi extends BaseService
      */
     public function getIpInfo($ip)
     {
-        $response = $this->http([
+        $response = $this->http->request([
             'url' => 'http://api.map.baidu.com/location/ip',
             'referer' => true,
             'dataType' => 'json',
