@@ -1,9 +1,9 @@
 <?php
 
-use Miaoxing\Plugin\BaseController;
+use Miaoxing\Plugin\BasePage;
 use Miaoxing\Region\Service\RegionModel;
 
-return new class extends BaseController {
+return new class extends BasePage {
     public function get($req)
     {
         // 支持编号和名称两种参数
