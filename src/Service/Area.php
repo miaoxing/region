@@ -2,7 +2,6 @@
 
 namespace Miaoxing\Region\Service;
 
-use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Plugin\BaseService;
 
 class Area extends BaseService

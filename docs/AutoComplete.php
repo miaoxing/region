@@ -1,7 +1,6 @@
 <?php
 
 namespace Miaoxing\Region\Docs {
-
     /**
      * @property \Miaoxing\Region\Service\Area $area 区域
      * @method   \Miaoxing\Region\Service\Area|\Miaoxing\Region\Service\Area area()
@@ -12,9 +11,8 @@ namespace Miaoxing\Region\Docs {
 }
 
 namespace {
-
     /**
-     * @return \Miaoxing\Region\Docs\AutoComplete
+     * @return Miaoxing\Region\Docs\AutoComplete
      */
     function wei()
     {

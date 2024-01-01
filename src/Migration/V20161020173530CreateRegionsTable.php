@@ -19,7 +19,7 @@ class V20161020173530CreateRegionsTable extends BaseMigration
             ->index('name')
             ->exec();
 
-        $file = dirname(dirname(__DIR__)) . '/resources/schemas/regions.sql';
+        $file = dirname(__DIR__, 2) . '/resources/schemas/regions.sql';
         $content = file_get_contents($file);
         $content = str_replace('%prefix%', $this->db->getTablePrefix(), $content);
         $this->db->executeUpdate($content);

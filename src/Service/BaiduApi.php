@@ -58,7 +58,7 @@ class BaiduApi extends BaseService
             ],
         ]);
 
-        if ($response['status'] !== 0) {
+        if (0 !== $response['status']) {
             $this->logger->warning('获取IP信息失败', [
                 'ip' => $ip,
                 'res' => $response->getResponse(),
@@ -70,7 +70,7 @@ class BaiduApi extends BaseService
         $parts = explode('|', $response['address']);
 
         return [
-            'code' => $response['status'] === 0 ? 1 : -$response['status'],
+            'code' => 0 === $response['status'] ? 1 : -$response['status'],
             'province' => $detail['province'],
             'city' => $detail['city'],
             'district' => $detail['district'],

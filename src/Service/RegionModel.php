@@ -4,7 +4,6 @@ namespace Miaoxing\Region\Service;
 
 use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Plugin\Model\ModelTrait;
-use Miaoxing\Plugin\Service\Model;
 use Miaoxing\Region\Metadata\RegionTrait;
 
 /**
@@ -32,12 +31,12 @@ class RegionModel extends BaseModel
         return ($this->attributes['shortName'] ?? null) ?: $this->name;
     }
 
-    public function children(): RegionModel
+    public function children(): self
     {
         return $this->hasMany(static::class, 'parentId');
     }
 
-    public function parent(): RegionModel
+    public function parent(): self
     {
         return $this->belongsTo(static::class, 'id', 'parentId');
     }

@@ -3,7 +3,7 @@
 use Miaoxing\Plugin\BasePage;
 use Miaoxing\Region\Service\RegionModel;
 
-return new class extends BasePage {
+return new class() extends BasePage {
     public function get($req)
     {
         // 支持编号和名称两种参数
@@ -29,7 +29,7 @@ return new class extends BasePage {
 
         $regions->all();
 
-        if (in_array('children', (array) $req['include'])) {
+        if (in_array('children', (array) $req['include'], true)) {
             $regions->loadChildren($skipVirtual);
         }
 

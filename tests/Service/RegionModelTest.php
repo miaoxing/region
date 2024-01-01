@@ -9,6 +9,8 @@ class RegionModelTest extends BaseTestCase
 {
     /**
      * @dataProvider providerForGetShortName
+     * @param mixed $attributes
+     * @param mixed $shortName
      */
     public function testGetShortName($attributes, $shortName)
     {
@@ -24,7 +26,7 @@ class RegionModelTest extends BaseTestCase
                     'name' => 'Long name',
                     'shortName' => 'Short name',
                 ],
-                'Short name'
+                'Short name',
             ],
             [
                 [
@@ -45,7 +47,7 @@ class RegionModelTest extends BaseTestCase
                     'shortName' => null,
                 ],
                 'Long name',
-            ]
+            ],
         ];
     }
 }

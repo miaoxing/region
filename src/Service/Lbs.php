@@ -21,7 +21,7 @@ class Lbs extends BaseService
     /**
      * 根据IP获取详细信息
      *
-     * @param null|string $ip
+     * @param string|null $ip
      * @return array
      */
     public function getIpInfo($ip = null)
@@ -29,7 +29,7 @@ class Lbs extends BaseService
         $ip || $ip = $this->request->getIp();
         try {
             $that = $this;
-            $info = $this->cache->remember('ip-info:v2:' . $ip, 86400 * 7, function () use ($ip, $that) {
+            $info = $this->cache->remember('ip-info:v2:' . $ip, 86400 * 7, static function () use ($ip, $that) {
                 return $that->ipApi->getIpInfo($ip);
             });
         } catch (\ErrorException $e) {
