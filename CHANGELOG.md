@@ -1,3 +1,14 @@
+## [0.2.32](https://github.com/miaoxing/region/compare/v0.2.31...v0.2.32) (2024-03-31)
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/app:** upgrade from `0.8.2` to `0.8.3`
+* **@miaoxing/dev:** upgrade from `9.1.0` to `9.1.1`
+
 ## [0.2.31](https://github.com/miaoxing/region/compare/v0.2.30...v0.2.31) (2024-02-29)
 
 
