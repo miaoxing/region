@@ -4,15 +4,20 @@ namespace Miaoxing\Region\Service;
 
 use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Plugin\Model\ModelTrait;
-use Miaoxing\Region\Metadata\RegionTrait;
 
 /**
- * @property RegionModel $parent
+ * @property int|null $id
+ * @property int $parentId
+ * @property string $name
+ * @property mixed $shortName
+ * @property int $sort 顺序，从大到小排列
+ * @property bool $hasChildren
+ * @property self|self[] $children
+ * @property self $parent
  */
 class RegionModel extends BaseModel
 {
     use ModelTrait;
-    use RegionTrait;
 
     /**
      * @var int[]
@@ -31,11 +36,19 @@ class RegionModel extends BaseModel
         return ($this->attributes['shortName'] ?? null) ?: $this->name;
     }
 
+    /**
+     * @Relation
+     * @return self|self[]
+     */
     public function children(): self
     {
         return $this->hasMany(static::class, 'parentId');
     }
 
+    /**
+     * @Relation
+     * @return self
+     */
     public function parent(): self
     {
         return $this->belongsTo(static::class, 'id', 'parentId');
